@@ -19,22 +19,22 @@ export function FinalCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
-            <Link 
-              href="#contact" 
+            <Link
+              href="#contact"
               className="w-full sm:w-auto bg-brand-khaki text-brand-charcoal font-bold uppercase tracking-widest text-sm px-10 py-5 rounded-full hover:bg-white transition-colors text-center"
             >
               Discuss Your Project
             </Link>
-            <Link 
-              href="#contact" 
+            <Link
+              href="#contact"
               className="w-full sm:w-auto bg-transparent border border-white/30 text-white font-bold uppercase tracking-widest text-sm px-10 py-5 rounded-full hover:border-white transition-colors text-center"
             >
-              Book Strategy Call
+              Book a 15-Minute Strategy Call
             </Link>
           </div>
           <div className="mt-8">
              <Link href="#contact" className="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors border-b border-white/20 pb-1">
-              or request a proposal
+              Request a fee proposal
             </Link>
           </div>
         </div>

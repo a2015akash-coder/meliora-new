@@ -10,11 +10,10 @@ export function Contact() {
               Get in touch
             </div>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-charcoal mb-6 leading-tight">
-              Your First Step <br />
-              Toward <span className="italic text-brand-olive">Strategic Growth</span>
+              Get in <span className="italic text-brand-olive">Touch</span>
             </h2>
             <p className="text-lg text-brand-charcoal-light leading-relaxed mb-12 max-w-md">
-              We’re ready to listen and provide tailored consulting solutions. Share your details and our team will connect with you soon.
+              Book a 15-minute strategy call, request a fee proposal, or discuss your project with our team.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

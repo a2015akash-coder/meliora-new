@@ -83,11 +83,19 @@ export function WhyMeliora() {
               <div>
                 <h4 className="text-xl font-serif text-white mb-3">We focus on what works in practice</h4>
                 <p className="text-white/70 leading-relaxed text-sm">
-                  Our advice reflects real-world assessment processes, not just theoretical compliance. Projects that are clearly positioned, strategically aligned and defensible across planning, regulatory and stakeholder contexts.
+                  Our advice reflects real-world assessment processes, not just theoretical compliance.
                 </p>
               </div>
             </div>
 
+          </div>
+
+          {/* Outcome */}
+          <div className="lg:col-span-12 mt-12 border-t border-white/10 pt-10 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40 mb-3">Outcome</p>
+            <p className="text-lg text-white/70 leading-relaxed max-w-3xl mx-auto font-light">
+              Projects that are clearly positioned, strategically aligned and defensible across planning, regulatory and stakeholder contexts.
+            </p>
           </div>
 
         </div>

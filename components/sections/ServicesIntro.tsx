@@ -4,17 +4,16 @@ import { ArrowRight } from "lucide-react";
 
 export function ServicesIntro() {
   return (
-    <section id="services" className="py-24 md:py-32 bg-brand-beige overflow-hidden">
+    <section id="services" className="py-24 md:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         
         {/* Intro */}
         <div className="max-w-3xl mb-24">
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-charcoal mb-6 leading-tight">
-            Strategic Path to <span className="italic text-brand-olive">Transformation</span>
+            Our <span className="italic text-brand-olive">Services</span>
           </h2>
           <p className="text-lg text-brand-charcoal-light leading-relaxed max-w-2xl">
-            We offer planning, social impact and engagement services as standalone support where required. 
-            However, our strongest value is in bringing these elements together as part of a coordinated approval strategy.
+            We provide planning, social impact and engagement services to support projects at all stages — from early feasibility through to approvals and strategic advisory.
           </p>
         </div>
 
