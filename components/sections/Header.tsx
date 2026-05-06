@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Search, Menu, X, Linkedin, Instagram, Mail, MapPin, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -66,14 +67,16 @@ export function Header() {
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <Link
-              href="/"
-              className="font-serif text-2xl tracking-wide uppercase font-bold flex items-center gap-2"
-            >
-              <div className="w-8 h-8 rounded-full border border-brand-charcoal/30 flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-brand-charcoal"></div>
-              </div>
-              Meliora
+            <Link href="/" className="relative block">
+              <Image
+                src="/logos/meliora.webp"
+                alt="Meliora Projects"
+                width={240}
+                height={89}
+                priority
+                className="h-11 w-auto brightness-0"
+                style={{ imageRendering: "auto" }}
+              />
             </Link>
 
             {/* Desktop Nav */}
@@ -143,9 +146,14 @@ export function Header() {
               className="fixed inset-0 z-50 bg-brand-beige text-brand-charcoal p-6 flex flex-col md:hidden"
             >
               <div className="flex justify-between items-center mb-12">
-                <span className="font-serif text-2xl tracking-wide uppercase font-bold">
-                  Meliora
-                </span>
+                <Image
+                  src="/logos/meliora.webp"
+                  alt="Meliora Projects"
+                  width={160}
+                  height={59}
+                  className="h-7 w-auto brightness-0"
+                  style={{ imageRendering: "auto" }}
+                />
                 <button
                   onClick={() => setMobileMenuOpen(false)}
                   className="p-2"
