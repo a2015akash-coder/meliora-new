@@ -1,68 +1,131 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const stats = [
+  { value: "2019", label: "Established" },
+  { value: "128", label: "NSW Council Areas Covered" },
+  { value: "1000+", label: "Successful Projects" },
+  { value: "3000+", label: "Expert Consultations" },
+];
+
 export function Hero() {
   return (
-    <section id="home" className="relative h-[100svh] w-full flex items-center justify-start overflow-hidden bg-brand-charcoal">
-      {/* Background Image & Overlays */}
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src="https://picsum.photos/seed/sydney-urban-architecture/1920/1080" 
-          alt="Aerial urban architecture"
-          fill
-          priority
-          referrerPolicy="no-referrer"
-          className="object-cover object-center opacity-60"
-        />
-        {/* Soft Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent opacity-80" />
-        
-        {/* Subtle Grid Overlay */}
-        <div className="absolute inset-0" style={{ 
-          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)',
-          backgroundSize: '4rem 4rem'
-        }} />
+    <section
+      id="home"
+      className="relative min-h-[100svh] w-full flex flex-col items-center justify-center overflow-hidden bg-brand-charcoal"
+    >
+      {/* Subtle grid background */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+          backgroundSize: "5rem 5rem",
+        }}
+      />
+
+      {/* Decorative dots */}
+      <div className="absolute top-12 left-1/2 -translate-x-1/2 flex gap-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-brand-khaki/40" />
+        <span className="w-1.5 h-1.5 rounded-full bg-brand-khaki/20" />
+        <span className="w-1.5 h-1.5 rounded-full bg-brand-khaki/40" />
       </div>
 
-      {/* Structured line elements */}
-      <div className="absolute top-0 bottom-0 left-8 md:left-16 w-[1px] bg-white/10 z-0" />
-      <div className="absolute top-0 bottom-0 right-8 md:right-16 w-[1px] bg-white/10 z-0" />
-      <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-white/5 z-0" />
+      {/* Main content area */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl pt-28 pb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-8 lg:gap-12">
+          {/* Left — Headline */}
+          <div className="text-center lg:text-right">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-[68px] leading-[1.1] text-white">
+              Position your{" "}
+              <span className="text-brand-khaki italic">project</span> for
+              approval <span className="opacity-50">—</span> with clarity,
+              strategy and confidence.
+            </h1>
+          </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl pt-24">
-        <div className="max-w-3xl">
-         
-          
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[80px] leading-[1.1] text-white mb-8">
-            Position your <span className="text-brand-khaki italic">project</span> for approval <span className="opacity-60">—</span> with clarity, strategy and confidence.
-          </h1>
-          
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-8 font-light leading-relaxed">
-            From exempt and CDC through to local DA, RSD and SSD, we provide the clarity needed to move forward with confidence. 
-            Focusing on strategic planning and development advice across both the private and public sectors.
-          </p>
+          {/* Center — Image with decorative rings */}
+          <div className="relative mx-auto flex items-center justify-center">
+            <div className="absolute w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:w-[400px] lg:h-[400px] rounded-full border border-white/[0.07]" />
+            <div className="absolute w-[240px] h-[240px] sm:w-[290px] sm:h-[290px] lg:w-[340px] lg:h-[340px] rounded-full border border-white/[0.12]" />
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-brand-khaki/60" />
+            <div className="relative w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full overflow-hidden">
+              <Image
+                src="https://picsum.photos/seed/professional-portrait/600/600"
+                alt="Planning professional"
+                fill
+                priority
+                referrerPolicy="no-referrer"
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-brand-khaki/30" />
+            <div className="absolute bottom-8 left-4 w-1.5 h-1.5 rounded-full bg-white/20" />
+          </div>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mt-12">
-            <Link 
-              href="#contact" 
-              className="bg-brand-khaki text-brand-charcoal font-bold uppercase tracking-widest text-sm px-8 py-4 rounded-full border border-brand-khaki hover:bg-transparent hover:text-brand-khaki transition-all text-center w-full sm:w-auto"
+          {/* Right — H2, Support line + CTA */}
+          <div className="text-center lg:text-left max-w-md mx-auto lg:mx-0">
+            <h2 className="text-base sm:text-lg text-white/80 leading-relaxed mb-4 font-light">
+              From exempt and CDC through to local DA, RSD and SSD, we provide
+              the clarity needed to move forward with confidence.
+            </h2>
+            <p className="text-sm sm:text-base text-white/50 leading-relaxed mb-8 font-light">
+              Focusing on strategic planning and development advice across both
+              the private and public sectors.
+            </p>
+            <Link
+              href="#contact"
+              className="group inline-flex items-center gap-3 bg-brand-khaki text-brand-charcoal font-semibold uppercase tracking-widest text-sm px-8 py-4 rounded-full border border-brand-khaki hover:bg-transparent hover:text-brand-khaki transition-all"
             >
-              Discuss Your Project
-            </Link>
-            <Link 
-              href="#contact" 
-              className="bg-transparent text-white font-bold uppercase tracking-widest text-sm px-8 py-4 rounded-full border border-white/30 hover:border-white transition-all text-center w-full sm:w-auto"
-            >
-              Book a 15-minute Strategy Call
+              Get Started
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M7 17L17 7M17 7H7M17 7v10"
+                />
+              </svg>
             </Link>
           </div>
-          <div className="mt-6 flex items-center">
-            <div className="w-8 h-[1px] bg-white/30 mr-4"></div>
-            <Link href="#contact" className="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">
-              or request a fee proposal
-            </Link>
+        </div>
+      </div>
+
+      {/* Stats bar */}
+      <div className="relative z-10 w-full mt-auto">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl pb-10">
+          <div className="bg-brand-beige/95 backdrop-blur-sm rounded-2xl shadow-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-[1.3fr_1fr_1fr_1fr_1fr] divide-y sm:divide-y-0 sm:divide-x divide-brand-charcoal/10">
+              {/* Tagline cell */}
+              <div className="px-8 py-6 flex items-center">
+                <p className="font-serif text-lg sm:text-xl text-brand-charcoal leading-snug">
+                  Clear Strategy,
+                  <br />
+                  <span className="italic text-brand-olive">
+                    Stronger Applications
+                  </span>
+                </p>
+              </div>
+              {/* Stat cells */}
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="px-6 py-6 flex flex-col items-center justify-center text-center"
+                >
+                  <span className="text-3xl sm:text-4xl font-bold text-brand-charcoal tracking-tight">
+                    {stat.value}
+                  </span>
+                  <span className="text-[11px] uppercase tracking-widest text-brand-charcoal/60 mt-1 leading-tight">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
